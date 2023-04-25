@@ -1,191 +1,132 @@
-<div class="section section-buttons">
-    <div class="container">
-        <div class="tim-title">
-            <h2>Basic Components</h2>
-        </div>
-        <div id="buttons">
-            <div class="tim-title">
-                <h3>Buttons
-                    <br/>
-                    <small>Pick your style</small>
-                </h3>
-            </div>
-            <div class="row">
-                <div class="col-md-8">
-                    <button type="button" class="btn btn-danger">Default</button>
-                    <button type="button" class="btn btn-danger btn-round">Round</button>
-                    <button type="button" class="btn btn-danger btn-round"><i class="fa fa-heart"></i> With Icon</button>
-                    <button type="button" class="btn btn-danger btn-just-icon"><i class="fa fa-heart"></i></button>
-                    <button type="button" class="btn btn-danger btn-link">Simple</button>
-                </div>
-            </div>
-            <div class="tim-title">
-                <h3><small>Pick your size</small></h3>
-            </div>
-            <div class="row">
-                <div class="col-md-8">
-                    <button type="button" class="btn btn-outline-danger btn-sm">Small</button>
-                    <button type="button" class="btn btn-outline-danger">Regular</button>
-                    <button type="button" class="btn btn-outline-danger btn-lg">Large</button>
-                </div>
-            </div>
-            <div class="tim-title">
-                <h3><small>Pick your color</small></h3>
-            </div>
-            <div class="row">
-                <div class="col-md-8">
-                    <button type="button" class="btn btn-outline-default btn-round">Default</button><button type="button" class="btn btn-outline-primary btn-round">Primary</button>
-                    <button type="button" class="btn btn-outline-info btn-round">Info</button>
-                    <button type="button" class="btn btn-outline-success btn-round">Success</button>
-                    <button type="button" class="btn btn-outline-warning btn-round">Warning</button>
-                    <button type="button" class="btn btn-outline-danger btn-round">Danger</button>
-                </div>
-            </div>
-            <br/>
-            <div class="row">
-                <div class="col-md-8">
-                    <button type="button" class="btn btn-default btn-round">Default</button>
-                    <button type="button" class="btn btn-primary btn-round">Primary</button>
-                    <button type="button" class="btn btn-info btn-round">Info</button>
-                    <button type="button" class="btn btn-success btn-round">Success</button>
-                    <button type="button" class="btn btn-warning btn-round">Warning</button>
-                    <button type="button" class="btn btn-danger btn-round">Danger</button>
-                </div>
-            </div>
-        </div>
-            <br/>
-        <div class="tim-title">
-            <h3>Links</h3>
-        </div>
-        <div class="row">
-            <div class="col-md-8">
-                <a href="#0" class="btn btn-link btn-default">Default</a>
-                <a href="#0" class="btn btn-link btn-primary">Primary</a>
-                <a href="#0" class="btn btn-link btn-success">Success</a>
-                <a href="#0" class="btn btn-link btn-info">Info</a>
-                <a href="#0" class="btn btn-link btn-warning">Warning</a>
-                <a href="#0" class="btn btn-link btn-danger">Danger</a>
-                <a href="#0" class="btn btn-link btn-neutral">Neutral</a>
-            </div>
-        </div>
-        <br/>
-        <div class="tim-title">
-            <h3>Inputs</h3>
-        </div>
-        <div class="row">
-            <div class="col-sm-3">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Default">
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="form-group has-success">
-                    <input type="text" class="form-control form-control-success" id="inputSuccess1" value="Success">
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="form-group has-danger">
-                    <input type="text" class="form-control form-control-danger" id="inputDanger1" value="Error">
-                    <div class="form-control-feedback">Sorry, that username's taken. Try another?</div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="input-group" [ngClass]="{'input-group-focus':focus===true}">
-                    <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1" (focus)="focus=true" (blur)="focus=false" >
-                    <div class="input-group-append">
-                      <span class="input-group-text" id="basic-addon1"><i class="fa fa-group" aria-hidden="true"></i></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br/>
-        <div class="row">
-            <div class="col-sm-6 col-lg-3">
-                <div class="tim-title">
-                    <h3>Checkboxes</h3>
-                </div>
-                <div class="form-check">
-                  <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" value="">
-                    Unchecked
-                    <span class="form-check-sign"></span>
-                  </label>
-                </div>
-                <div class="form-check">
-                  <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" value="" checked="">
-                    Checked
-                    <span class="form-check-sign"></span>
-                  </label>
-                </div>
-                <div class="form-check disabled">
-                  <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" value="" disabled="">
-                    Disabled unchecked
-                    <span class="form-check-sign"></span>
-                  </label>
-                </div>
-                <div class="form-check disabled">
-                  <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" value="" checked="" disabled="">
-                    Disabled checked
-                    <span class="form-check-sign"></span>
-                  </label>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-                <div class="tim-title">
-                    <h3>Radio Buttons</h3>
-                </div>
-                <div class="form-check-radio">
-                  <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" >
-                    Radio is off
-                    <span class="form-check-sign"></span>
-                  </label>
-                </div>
-                <div class="form-check-radio">
-                  <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" checked="">
-                    Radio is on
-                    <span class="form-check-sign"></span>
-                  </label>
-                </div>
-                <div class="form-check-radio disabled">
-                  <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios3" value="option3" disabled="">
-                    Disabled Radio is off
-                    <span class="form-check-sign"></span>
-                  </label>
-                </div>
-                <div class="form-check-radio disabled">
-                  <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios4" value="option3" checked disabled="">
-                    Disabled Radio is on
-                    <span class="form-check-sign"></span>
-                  </label>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-                <div class="tim-title">
-                    <h3>Toggle Buttons</h3>
-                </div>
-                <bSwitch
-                    [switch-on-color]="'primary'">
-                </bSwitch>
-                <bSwitch
-                    [switch-on-color]="'primary'"
-                    [(ngModel)]="state_default"> Toggle is off
-                </bSwitch>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-                <div class="tim-title">
-                    <h3>Sliders</h3>
-                </div>
-                <nouislider [connect]="false" [min]="0" [max]="100" [step]="1" [(ngModel)]="simpleSlider" [tooltips]="false" class="slider"></nouislider>
-                <br>
-                <nouislider class="slider slider-info" [connect]="true" [min]="0" [max]="100" [step]="1" [(ngModel)]="doubleSlider" [tooltips]="false"></nouislider>
-            </div>
-        </div>
-    </div>
+<!--<input
+    style="display: none"
+    type="file" (change)="onFileChanged($event)"
+    #fileInput>
+<button (click)="fileInput.click()">Select File</button>
+
+<img *ngIf="image" class="images" [src]="image.as_file" style="width:500px"/>
+<p *ngIf="!image">No image selected.</p>
+<button (click)="onUpload()">Upload!</button> -->
+<div class="wrapper">
+    <div class="main">
+        <div class="section">
+            <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+                <li [ngbNavItem]="1">
+                    <button ngbNavLink>Generate</button>
+                    <ng-template ngbNavContent>
+                        <mat-card style="width: 750px; align-self: center">
+                            <mat-card-header>
+                                <mat-card-title>{{model.name}}</mat-card-title>
+
+
+
+                                <img mat-card-avatar class="images" src="{{'data:image/jpg;base64,' + model.thumbnail}}" style="width: 40px"/>
+
+                            </mat-card-header>
+                            <mat-card-content>
+                                <div style="align-self: center; width: 100%; min-width: 100px; max-width: 745px">
+
+                                    <form style="align-self: center; width: 100%; min-width: 100px; max-width: 745px">
+                                        <mat-form-field style="align-self: center; width: 75%">
+                                            <mat-label>Input New Prompt:</mat-label>
+                                            <input matInput name="prompt" [(ngModel)]="prompt_text" (keydown.enter)="clickPrompt(prompt_text,num_samples,steps)">
+                                        </mat-form-field>
+
+                                        <mat-form-field appearance="fill" style="align-self: center; width: 25%">
+                                            <mat-label>Number to generate</mat-label>
+                                            <mat-select [(ngModel)]="num_samples" name="number_of_samples">
+                                                <mat-option *ngFor="let s of sample_nums" [value]="s">
+                                                    {{s}}
+                                                </mat-option>
+
+                                            </mat-select>
+                                        </mat-form-field>
+
+
+                                    </form>
+                                    <div style="justify-content: center; display: flex">
+                                        <mat-slider min="25" max="150" step="5" discrete showTickMarks style="display: inline-block; width: 60%">
+                                            <input matSliderThumb [(ngModel)]="steps">
+                                        </mat-slider>
+                                        <p style="display: inline-block" matTooltip="The number of inference steps used. See about page.">{{steps + ' steps'}}</p>
+                                        <div style="flex: 1"></div>
+                                        <button mat-flat-button color="accent" (click)="clickPrompt(prompt_text,num_samples,steps)">Generate</button>
+                                        <button mat-flat-button color="warn" (click)="clear()">Clear</button>
+
+                                    </div>
+                                    <div *ngIf="status_pending" style="justify-content: center; display: flex">
+                                        <mat-progress-bar color="accent" mode="indeterminate"></mat-progress-bar>
+                                    </div>
+                                </div>
+
+                                <mat-card *ngIf="new_results && new_results.length > 0">
+                                    <mat-card-header>
+                                        <mat-card-title>Generated Images:</mat-card-title>
+                                        <div class="spacer"></div>
+                                        <button *ngIf="any_selected()" mat-raised-button color="primary" (click)="saveImages()">Save Selected Images</button>
+                                        <button *ngIf="!any_selected()" mat-raised-button color="primary" disabled>Save Selected Images</button>
+                                    </mat-card-header>
+                                    <mat-card-content>
+                                        <mat-grid-list cols="2" rowHeight="1:1.5" style="width: 100%; height: 100%">
+                                            <mat-grid-tile *ngFor="let new_result of new_results; index as i">
+                                                <mat-card  style="max-width: 100%">
+                                                    <mat-card-header>
+                                                        <mat-checkbox (change)="change_generated_image_selection(i)" ></mat-checkbox>
+                                                    </mat-card-header>
+                                                    <div><img  class="images" src="{{'data:image/jpg;base64,' + new_result.image}}" style="width:100%"/></div>
+
+                                                    <mat-card-actions style="align-self: center"><button mat-icon-button *ngFor="let ratingId of rating_nums;index as j" [id]="'star_'+j" (click)="onRate(j+1, i)" [matTooltip]="ratingId+''" matTooltipPosition="above">
+                                                        <mat-icon>{{showIcon(j, i)}}</mat-icon>
+                                                    </button></mat-card-actions>
+                                                </mat-card>
+                                            </mat-grid-tile>
+
+                                        </mat-grid-list>
+
+                                    </mat-card-content>
+
+
+                                </mat-card>
+                            </mat-card-content>
+
+                        </mat-card>
+                    </ng-template>
+                </li>
+                <li [ngbNavItem]="2">
+                    <button ngbNavLink>History</button>
+                    <ng-template ngbNavContent>
+                        <div *ngIf="saved_images && saved_images.length > 0 && !before_init" style="width: 750px">
+                            <mat-grid-list cols="4" rowHeight="1:1.85" style="width: 100%;">
+                                <mat-grid-tile *ngFor="let image of saved_images">
+                                    <mat-card style="width: 95%; border-color: #673ab7; border-width: 1px; height: 98%">
+                                        <mat-card-header>
+                                            <mat-card-title>Rating: {{image.rating}}</mat-card-title>
+                                            <mat-card-subtitle>Number of Steps: {{image.steps}}</mat-card-subtitle>
+                                        </mat-card-header>
+                                        <img mat-card-image class="images" src="{{'data:image/jpg;base64,' + image.image}}" style="width: 100%"/>
+                                        <!--<mat-card-content>
+                                            <p>Prompt: {{image.prompt_text}}</p>
+                                        </mat-card-content>-->
+                                        <mat-card-actions>
+                                            <button style="display: inline-block" mat-mini-fab matTooltip="Download" (click)="downloadImage(model.name, image.image)">
+                                                <mat-icon>save_alt</mat-icon>
+                                            </button>
+                                            <button style="display: inline-block" mat-mini-fab matTooltip="Delete" (click)="deleteImage(model.model_id, image.image_id)">
+                                                <mat-icon>delete</mat-icon>
+                                            </button>
+                                            <button mat-flat-button style="display: inline-block" color="primary" matTooltip="View Prompt" (click)="showPrompt(image.prompt_text)">Prompt</button>
+                                        </mat-card-actions>
+                                    </mat-card>
+                                </mat-grid-tile>
+                            </mat-grid-list>
+                        </div>
+                    </ng-template>
+                </li>
+            </ul>
+            <div [ngbNavOutlet]="nav" class="mt-2"></div>
+
+
+
+        </div></div>
 </div>
+

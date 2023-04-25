@@ -32,7 +32,7 @@ export class AppComponent implements OnInit {
                 navbar.classList.remove('navbar-transparent');
             } else {
                 // remove logic
-                navbar.classList.add('navbar-transparent');
+                //navbar.classList.add('navbar-transparent');
             }
         });
         var ua = window.navigator.userAgent;

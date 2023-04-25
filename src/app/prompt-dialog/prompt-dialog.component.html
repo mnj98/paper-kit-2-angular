@@ -1,0 +1,10 @@
+<h1 mat-dialog-title>Prompt:</h1>
+
+<div mat-dialog-content>
+    <p style="display: inline-block">{{data.prompt_text}}</p>
+    <button [cdkCopyToClipboard]="data.prompt_text" mat-icon-button style="display: inline-block" matTooltip="copy"><mat-icon>content_copy</mat-icon></button>
+</div>
+
+<div mat-dialog-actions>
+    <button mat-button mat-dialog-close>Ok</button>
+</div>

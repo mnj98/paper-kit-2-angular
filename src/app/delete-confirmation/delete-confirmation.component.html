@@ -1,0 +1,10 @@
+<h1 mat-dialog-title>Delete Image</h1>
+
+<div mat-dialog-content>
+    <p style="display: inline-block">Are you sure?</p>
+</div>
+
+<div mat-dialog-actions>
+    <button mat-raised-button color="warn" mat-dialog-close (click)="deleteImage(data.model_id, data.image_id)">Delete</button>
+    <button mat-stroked-button mat-dialog-close>Cancel</button>
+</div>
