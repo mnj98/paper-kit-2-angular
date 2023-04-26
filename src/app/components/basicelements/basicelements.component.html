@@ -14,7 +14,9 @@
                 <li [ngbNavItem]="1">
                     <button ngbNavLink>Generate</button>
                     <ng-template ngbNavContent>
-                        <mat-card style="width: 750px; align-self: center">
+
+                        <div style="display: flex; justify-content: center;">
+                        <mat-card style="width: 750px; align-self: center;">
                             <mat-card-header>
                                 <mat-card-title>{{model.name}}</mat-card-title>
 
@@ -90,12 +92,16 @@
                             </mat-card-content>
 
                         </mat-card>
+                    </div>
                     </ng-template>
                 </li>
                 <li [ngbNavItem]="2">
                     <button ngbNavLink>History</button>
                     <ng-template ngbNavContent>
-                        <div *ngIf="saved_images && saved_images.length > 0 && !before_init" style="width: 750px">
+
+                       <div style="display: flex; justify-content: center;"> 
+
+                        <div *ngIf="saved_images && saved_images.length > 0 && !before_init" style="width: 750px;">
                             <mat-grid-list cols="4" rowHeight="1:1.85" style="width: 100%;">
                                 <mat-grid-tile *ngFor="let image of saved_images">
                                     <mat-card style="width: 95%; border-color: #673ab7; border-width: 1px; height: 98%">
@@ -120,6 +126,11 @@
                                 </mat-grid-tile>
                             </mat-grid-list>
                         </div>
+
+                        
+                        </div>
+
+
                     </ng-template>
                 </li>
             </ul>
