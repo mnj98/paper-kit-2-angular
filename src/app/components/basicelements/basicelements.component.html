@@ -52,8 +52,8 @@
                                         </mat-slider>
                                         <p style="display: inline-block" matTooltip="The number of inference steps used. See about page.">{{steps + ' steps'}}</p>
                                         <div style="flex: 1"></div>
-                                        <button mat-flat-button color="accent" (click)="clickPrompt(prompt_text,num_samples,steps)">Generate</button>
-                                        <button mat-flat-button color="warn" (click)="clear()">Clear</button>
+                                        <button mat-flat-button style="color:aliceblue !important; background-color: green !important;" (click)="clickPrompt(prompt_text,num_samples,steps)">Generate</button>
+                                        <button mat-flat-button style="color:aliceblue !important; background-color: #152b61 !important;" color="accent" (click)="clear()">Clear</button>
 
                                     </div>
                                     <div *ngIf="status_pending" style="justify-content: center; display: flex">
@@ -63,10 +63,11 @@
 
                                 <mat-card *ngIf="new_results && new_results.length > 0">
                                     <mat-card-header>
-                                        <mat-card-title>Generated Images:</mat-card-title>
+                                        <mat-card-title>Generated Images</mat-card-title>
                                         <div class="spacer"></div>
-                                        <button *ngIf="any_selected()" mat-raised-button color="primary" (click)="saveImages()">Save Selected Images</button>
-                                        <button *ngIf="!any_selected()" mat-raised-button color="primary" disabled>Save Selected Images</button>
+                                        
+                                    
+                                    
                                     </mat-card-header>
                                     <mat-card-content>
                                         <mat-grid-list cols="2" rowHeight="1:1.5" style="width: 100%; height: 100%">
@@ -84,6 +85,12 @@
                                             </mat-grid-tile>
 
                                         </mat-grid-list>
+
+
+
+                                        <button *ngIf="any_selected()" mat-raised-button style="color:aliceblue !important; background-color: green !important;" (click)="saveImages()">Save Selected Images</button>
+                                        <button *ngIf="!any_selected()" mat-raised-button style="color:aliceblue !important; background-color: green !important;" disabled>Save Selected Images</button>
+                                    
 
                                     </mat-card-content>
 
@@ -104,7 +111,7 @@
                         <div *ngIf="saved_images && saved_images.length > 0 && !before_init" style="width: 750px;">
                             <mat-grid-list cols="4" rowHeight="1:1.85" style="width: 100%;">
                                 <mat-grid-tile *ngFor="let image of saved_images">
-                                    <mat-card style="width: 95%; border-color: #673ab7; border-width: 1px; height: 98%">
+                                    <mat-card style="width: 95%; border-color: #152b61; border-width: 1px; height: 98%">
                                         <mat-card-header>
                                             <mat-card-title>Rating: {{image.rating}}</mat-card-title>
                                             <mat-card-subtitle>Number of Steps: {{image.steps}}</mat-card-subtitle>
@@ -114,20 +121,20 @@
                                             <p>Prompt: {{image.prompt_text}}</p>
                                         </mat-card-content>-->
                                         <mat-card-actions>
-                                            <button style="display: inline-block" mat-mini-fab matTooltip="Download" (click)="downloadImage(model.name, image.image)">
+                                            <button style="display: inline-block; background-color: white !important;" mat-mini-fab matTooltip="Download" (click)="downloadImage(model.name, image.image)">
                                                 <mat-icon>save_alt</mat-icon>
                                             </button>
-                                            <button style="display: inline-block" mat-mini-fab matTooltip="Delete" (click)="deleteImage(model.model_id, image.image_id)">
+                                            <button style="display: inline-block; background-color: white !important;" mat-mini-fab matTooltip="Delete" (click)="deleteImage(model.model_id, image.image_id)">
                                                 <mat-icon>delete</mat-icon>
                                             </button>
-                                            <button mat-flat-button style="display: inline-block" color="primary" matTooltip="View Prompt" (click)="showPrompt(image.prompt_text)">Prompt</button>
+                                            <button mat-flat-button style="display: inline-block; color: aliceblue !important; background-color: #152b61 !important; border-color: #152b61 !important;" matTooltip="View Prompt" (click)="showPrompt(image.prompt_text)">Prompt</button>
                                         </mat-card-actions>
                                     </mat-card>
                                 </mat-grid-tile>
                             </mat-grid-list>
                         </div>
 
-                        
+
                         </div>
 
 
