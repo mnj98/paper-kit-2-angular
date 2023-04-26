@@ -1296,3 +1296,37 @@ pre.prettyprint {
     position: relative;
     z-index: 2;
 }
+
+
+
+
+
+.mdc-linear-progress__bar-inner {
+    border-color: #152b61 !important;
+}
+
+
+.mdc-slider__track--active_fill {
+    border-color: #008000 !important;
+  }
+
+
+.mat-mdc-slider .mdc-slider__thumb-knob {
+    background-color: #008000 !important;
+    border-color: #008000 !important;
+}
+
+.mdc-slider__track--inactive {
+    border-color: #008000 !important;
+  }
+
+
+  .mat-mdc-slider .mdc-slider__track--inactive {
+    background-color: #008000 !important;
+    opacity: .24;
+  }
+
+
+  .mat-mdc-progress-bar.mat-accent .mdc-linear-progress__buffer-bar {
+    background-color: aliceblue !important;
+  }
