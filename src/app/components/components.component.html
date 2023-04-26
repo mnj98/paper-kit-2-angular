@@ -24,7 +24,7 @@
                               <ng-template ngbSlide *ngFor="let model of trained_models">
                                   <img src="{{'data:image/jpg;base64,' + model.thumbnail}}" alt="{{model.name}}">
                                   <div class="carousel-caption">
-                                      <button type="button" class="btn btn-outline-danger btn-round" (click)="selectModel(model)">{{model.name}}</button>
+                                      <button type="button" class="btn btn-outline-danger btn-round" style="color: #152b61 !important; border-color: aliceblue !important; background-color: aliceblue !important;" (click)="selectModel(model)">{{model.name}}</button>
                                   </div>
                               </ng-template>
 
