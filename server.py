@@ -4,7 +4,7 @@ from threading import Semaphore
 from flask_cors import CORS
 from flask_mongoengine import MongoEngine
 
-app = Flask(__name__, static_folder=os.getcwd() + '/templates', static_url_path='')
+app = Flask(__name__, static_folder=os.getcwd() + '/dist', static_url_path='')
 
 
 # Connect with database
